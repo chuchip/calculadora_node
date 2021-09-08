@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>            
+    <div>&nbsp;</div>
+    <div class="display-5">Introducir valores de la operación</div>
+    <div>&nbsp;</div>
+        <form action="/accion" method="POST">
+            <div class="row" ><label class="col-1">Id: </label>
+                <input class="col-3" type="text" name="id" autocomplete="true" required>
+            </div><div>&nbsp;</div>
+            <div class="row"><label class="col-1">Accion:</label>
+                <div class="col-3">
+                    <select name="accion" required>
+                    <option value="+">Sumar</option>
+                    <option value="-">Restar</option>
+                    <option value="*">Multiplicar</option>
+                    <option value="/">Dividir</option>
+                    <option value="/">Mostrar</option>
+                </select>
+            </div><div>&nbsp;</div>
+            </div class="row">
+                <label class="col-1" >Numero: </label><input class="col-3" type="number" name="numero" value="0" required>
+            </div><div>&nbsp;</div>
+            
+            <div class="row" >
+                
+                    <div class="col-2 offset-md-1">
+                        <button type="submit" >Enviar</button>
+                    </div>        
+                    <div class="col-2">
+                        <button type="reset" >Reset</button>
+                    </div>
+            </div>    <div>&nbsp;</div>
+            
+        </form>
+    </div>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>
