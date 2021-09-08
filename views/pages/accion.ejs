@@ -7,12 +7,16 @@
     <header>
         <%- include('../partials/header'); %>
     </header>
+    <a href="/?id=<%=operacion.id %>" >Ejecutar otra operación</a>
     <div class="col-sm-8">
         <div class="jumbotron">
             <h1>Resultado de accion</h1>
         </div>
     </div>
-    <p><%= log %></p>
+    <p>Ultima Operación: <%=operacion.accion%> con numero: <%= operacion.numero %> del ID: <%= operacion.id%></p>
+    
+    <p>Operacion realizadas: <%= log %></p>
+    <p>Valor resultante: <%=resultado %> </p>
     <footer>
         <%- include('../partials/footer'); %>
     </footer>

@@ -8,24 +8,24 @@
         <%- include('../partials/header'); %>
     </header>            
     <div>&nbsp;</div>
-    <div class="display-5">Introducir valores de la operación</div>
+    <div class="display-6">Introducir valores de la operación</div>
     <div>&nbsp;</div>
         <form action="/accion" method="POST">
             <div class="row" ><label class="col-1">Id: </label>
-                <input class="col-3" type="text" name="id" autocomplete="true" required>
+                <input class="col-3" type="text" name="id" value="<%=id%>" required>
             </div><div>&nbsp;</div>
             <div class="row"><label class="col-1">Accion:</label>
                 <div class="col-3">
                     <select name="accion" required>
-                    <option value="+">Sumar</option>
-                    <option value="-">Restar</option>
-                    <option value="*">Multiplicar</option>
-                    <option value="/">Dividir</option>
-                    <option value="/">Mostrar</option>
-                </select>
-            </div><div>&nbsp;</div>
+                        <option value="+">Sumar</option>
+                        <option value="-">Restar</option>
+                        <option value="*">Multiplicar</option>
+                        <option value="/">Dividir</option>
+                        <option value="R">Resetear</option>
+                     </select>
+                 </div><div>&nbsp;</div>
             </div class="row">
-                <label class="col-1" >Numero: </label><input class="col-3" type="number" name="numero" value="0" required>
+                <label class="col-1" >Numero: </label><input class="col-3" type="number"  step="0.01" name="numero" value="0.00" required>
             </div><div>&nbsp;</div>
             
             <div class="row" >
@@ -40,6 +40,7 @@
             
         </form>
     </div>
+    <div><%= log %></div>
     <footer>
         <%- include('../partials/footer'); %>
     </footer>
