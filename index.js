@@ -1,6 +1,10 @@
 // load the things we need
 var express = require('express');
+require('dotenv').config();
 var app = express();
+
+const port = process.env['PORT'] || 3000
+
 var tiempo=0;
 var datos=[];
 const ids=new Map();
@@ -92,9 +96,9 @@ app.get('/about', (req, res) => {
     res.render('pages/about');
 });
 
-app.listen(8080, ()=>
+app.listen(port, ()=>
  {
-      console.log('8080 is the magic port')
+      console.log(`${port} is the magic port`)
       setInterval(incrementaTiempo,1000);
  });
 
